@@ -1,4 +1,4 @@
-<h1> Parrot Card Game 🦜</h1> 
+<h1> ParrotS Card Game 🦜</h1> 
 
 
 
