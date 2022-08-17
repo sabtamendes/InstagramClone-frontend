@@ -26,22 +26,25 @@ main {
     align-items: center;
 }
 
-.card {
-    display: flex;
-    align-items: center;
-}
-
 .cardBoard {
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    display: grid;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 55vw;
+    height: auto;
+}
 
-    /* background-color: blue; */
-    max-width: 100vw;
-    min-width: 50%;
-
+.card {
+    width: 130px;
+    height: 170px;
+    position: relative;
+    perspective: 800px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .front,
@@ -54,6 +57,8 @@ main {
     border: 1px solid #99CEA8;
     border-radius: 5px;
     display: flex;
+
+    transition: 700ms;
 }
 
 img {
@@ -61,22 +66,15 @@ img {
     min-height: 50%;
 }
 
-.face {
-    backface-visibility: hidden;
-    transition: all .5s;
-    transform-style: preserve-3d;
-}
-
-.back {
-    transform: rotateY(180deg);
-}
-
 .card.flip .back {
     transform: rotateY(0deg);
+    z-index: 1;
 }
 
 .card.flip .front {
     transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    z-index: 0;
 }
 
 @media (max-width: 650px) {

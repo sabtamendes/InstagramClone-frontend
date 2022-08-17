@@ -1,5 +1,5 @@
 let cartas;
-const parrots = ['bobros', 'explody', 'fiesta', 'metal', 'revertit', 'triplets', 'unicorn']
+const parrots = ['bobross', 'explody', 'fiesta', 'metal', 'revertit', 'triplets', 'unicorn']
 
 function perguntarCartas() {
     cartas = Number(prompt("Digite a quantidade de cartas que você quer jogar! Regra: Deverá ser somente números pares e apartir de 4 à 14 cartas!"));
@@ -21,7 +21,7 @@ function perguntarInfinitamente() {
 //dividir o array em dois
 // parrots = parrots.length / 2
 function inserirCartas() {
-    const ul = document.querySelector('.card');
+    const ul = document.querySelector('.cardBoard');
     console.log(ul.innerHTML)
     ul.innerHTML += '';
     for(let i = 0; i < parrots.length; i++){
@@ -37,4 +37,6 @@ function inserirCartas() {
     }
    
 }
-inserirCartas()
+inserirCartas();
+
+
