@@ -46,7 +46,7 @@ export default function Post(props) {
 
                 <div class="curtidas">
                     <img src={props.likesImage} />
-                    <div class="texto" onClick={console.log(() =>changeColor("heart-outline") ? props.likesCount++ : props.likesCount--)}>
+                    <div class="texto" onClick={() =>changeColor("heart-outline") ? props.likesCount + 1 : props.likesCount-1}>
                         Curtido por <strong>respondeai</strong> e <strong>outras {props.likesCount} pessoas</strong>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ export default function Story(props) {
     <>
       <div class="story">
         <div class="imagem">
-          <img src={props.image} />
+          <img src={props.image} alt="image"/>
         </div>
         <div class="usuario">
           {props.text}

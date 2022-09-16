@@ -8,7 +8,8 @@ export default function Posts() {
       name: "meowed",
       imagePost: "./assets/img/gato-telefone.jpeg",
       likesImage: "./assets/img/respondeai.jpeg",
-      likesCount: 95.523
+      likesCount: 95.523,
+      type:"image"
     },
 
     {
@@ -16,7 +17,8 @@ export default function Posts() {
       name: "barked",
       imagePost: "./assets/img/dog.jpeg",
       likesImage: "./assets/img/filomoderna.jpeg",
-      likesCount: 101.525
+      likesCount: 101.525,
+      type:"video"
     }
   ]
   return (
