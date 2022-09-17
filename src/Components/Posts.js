@@ -8,8 +8,10 @@ export default function Posts() {
       name: "meowed",
       imagePost: "./assets/img/gato-telefone.jpeg",
       likesImage: "./assets/img/respondeai.jpeg",
-      likesCount: 95.523,
-      type:"image"
+      likesCount: 95,
+      type:"image",
+      liked: false,
+      saved:false
     },
 
     {
@@ -17,8 +19,10 @@ export default function Posts() {
       name: "barked",
       imagePost: "./assets/img/dog.jpeg",
       likesImage: "./assets/img/filomoderna.jpeg",
-      likesCount: 101.525,
-      type:"video"
+      likesCount: 101,
+      type:"video",
+      liked:false,
+      saved:false
     }
   ]
   return (
@@ -32,10 +36,11 @@ export default function Posts() {
             imagePost={item.imagePost}
             likesImage={item.likesImage}
             likesCount={item.likesCount}
+            like={item.liked}
+            save={item.saved}
           />
         )
       }
-
     </div>
   );
 }

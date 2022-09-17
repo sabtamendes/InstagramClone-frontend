@@ -1,26 +1,37 @@
+import React from "react";
 
 export default function Post(props) {
 
-    function changeColor(icone) {
-        let contador = 0;
-        console.log(icone)
-        let colorRed = document.querySelector(".red");
-        let colorWhite = document.querySelector(".white");
+    const [like, setLike] = React.useState(props.liked);
+    const [save, setSave] = React.useState(props.saved);
+    const [count, setCount] = React.useState(props.likesCount)
 
-        if (icone === 'heart-outline') {
-          colorRed.classList.add("red");
-          contador++;
-        }if(icone === 'bookmark-outline' ){
-            colorWhite.classList.add("white");
+    function likePost() {
+        setLike(!like)
+
+        if (like) {
+            return setCount(count - 1)
         }
-        contador--;
-      }
+        return setCount(count + 1)
+    }
+
+    function savePost() {
+        setSave(!save)
+    }
+
+    function countLikes() {
+        if (like) {
+            return setCount(count - 1)
+        }
+        return setCount(count + 1)
+    }
+
     return (
 
         <div class="post">
             <div class="topo">
                 <div class="usuario">
-                    <img src={props.imageUser} />
+                    <img src={props.imageUser} alt="texto alternativo" />
                     {props.name}
                 </div>
                 <div class="acoes">
@@ -28,34 +39,42 @@ export default function Post(props) {
                 </div>
             </div>
 
-            <div class="conteudo">
-                <img src={props.imagePost} />
+            <div class="conteudo" onClick={() => setLike(!like)}>
+                <img onClick={countLikes} src={props.imagePost} alt="texto alternativo" />
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline" onClick={() =>changeColor("heart-outline")}></ion-icon>
+                        {
+                            like
+                                ? <ion-icon name="heart" onClick={likePost}></ion-icon>
+                                : <ion-icon name="heart-outline" onClick={likePost}></ion-icon>
+                        }
+
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name="bookmark-outline" onClick={() =>changeColor('bookmark-outline')}></ion-icon>
+                        {
+                            save
+                                ? <ion-icon name="bookmark" onClick={savePost}></ion-icon>
+                                : <ion-icon name="bookmark-outline" onClick={savePost}></ion-icon>
+                        }
                     </div>
                 </div>
 
                 <div class="curtidas">
-                    <img src={props.likesImage} />
-                    <div class="texto" onClick={() =>changeColor("heart-outline") ? props.likesCount + 1 : props.likesCount-1}>
-                        Curtido por <strong>respondeai</strong> e <strong>outras {props.likesCount} pessoas</strong>
+                    <img src={props.likesImage} alt="texto alternativo" />
+                    <div class="texto">
+                        Curtido por <strong>respondeai</strong> e <strong>outras <span>{count}</span> pessoas</strong>
                     </div>
                 </div>
             </div>
         </div>
     )
-   
+
 }
 
 
 
-  

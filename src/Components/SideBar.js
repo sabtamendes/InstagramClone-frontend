@@ -1,6 +1,8 @@
-import Sugestions from "./Sugestions";
 import User from "./User";
+import Sugestions from "./Sugestions";
+
 export default function Sidebar() {
+  
   return (
     <div class="sidebar">
 
@@ -11,6 +13,7 @@ export default function Sidebar() {
           Sugestões para você
           <div>Ver tudo</div>
         </div>
+
         <Sugestions />
 
       </div >
