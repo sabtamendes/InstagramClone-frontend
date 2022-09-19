@@ -9,7 +9,12 @@ export default function User(props) {
 
   function changeImage() {
     const photo = prompt("insira a url");
-    setUrl(photo);
+    if(photo) {
+      setUrl(photo);
+    }else{
+      setUrl(props.userImage);
+    }
+   
   }
 
   function changeName(icon) {
