@@ -356,6 +356,18 @@ ion-icon {
   visibility: visible;
 }
 
+.rodape-mobile {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  display: none;
+}
+
 @media (max-width: 935px) {
   .sidebar {
     display: none;
@@ -424,6 +436,18 @@ ion-icon {
     left: 0;
   }
 
+  .rodape-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    width: 100%;
+  }
+
+  .rodape-mobile ion-icon {
+    font-size: 20px;
+  }
+
   .navbar .logo {
     display: none;
   }
@@ -437,12 +461,16 @@ ion-icon {
     position: relative;
     top: 4px;
   }
-}
 
-ion-icon {
-  visibility: visible;
-}
+  .menu {
+    visibility: hidden;
+  }
 
-.usuario ion-icon {
-  margin-left: 5px;
+  ion-icon {
+    visibility: visible;
+  }
+
+  .usuario ion-icon {
+    margin-left: 5px;
+  }
 }

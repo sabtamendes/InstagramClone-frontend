@@ -2,6 +2,7 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
 import SideBar from "./SideBar";
+import Footer from "./Footer";
 
 export default function Body() {
   return (
@@ -20,7 +21,7 @@ export default function Body() {
 
         <SideBar />
       </div>
-
+      <Footer />
     </>
   );
 }
