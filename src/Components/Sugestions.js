@@ -11,7 +11,7 @@ export default function Sugestions() {
         ]
     return (
         <>
-            
+
             {usersInformations.map(item => <Sugestion userImage={item.userImage} nickyname={item.nickyname} followInformation={item.followInformation} follow={item.follow} />)}
 
         </>

@@ -21,7 +21,7 @@ export default function Stories() {
         {userStories.map(item => <Story image={item.image} text={item.text} />)}
 
       </div>
-  
+
     </>
 
   )

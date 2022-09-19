@@ -40,7 +40,16 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo" onClick={() => setLike(!like)}>
-                <img onClick={countLikes} src={props.imagePost} alt="texto alternativo" />
+
+                {
+                    props.type === "image"
+
+                        ? <img onClick={countLikes} src={props.imagePost} alt="texto alternativo" />
+
+                        : <video width="100%" height="500px" controls loop>
+                            <source src={props.videoPost} type={props.type} />
+                        </video>
+                }
             </div>
 
             <div class="fundo">
@@ -67,7 +76,7 @@ export default function Post(props) {
                 <div class="curtidas">
                     <img src={props.likesImage} alt="texto alternativo" />
                     <div class="texto">
-                        Curtido por <strong>respondeai</strong> e <strong>outras <span>{count}</span> pessoas</strong>
+                        Curtido por <strong>{props.whoLiked}</strong> e <strong>outras <span>{count}</span> pessoas</strong>
                     </div>
                 </div>
             </div>

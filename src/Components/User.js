@@ -33,7 +33,7 @@ export default function User(props) {
 
   return (
     <div class="usuario">
-      <img onClick={changeImage} src={url} alt="texto alternativo"/>
+      <img onClick={changeImage} src={url} alt="texto alternativo" />
       <div class="texto" onClick={changeNickName}>
         <strong>{userNickName}</strong>
         <span>

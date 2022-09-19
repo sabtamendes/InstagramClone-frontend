@@ -8,5 +8,8 @@
 <li>Componentização</li>
 <li>Props</li>
 <li>JSX</li>
+<li>useState</li>
+<li>Destructuring</li>
 <li>onClick</li>
+<li>Seletor CSS de atributos</li>
 </ul>

@@ -2,7 +2,7 @@ import User from "./User";
 import Sugestions from "./Sugestions";
 
 export default function Sidebar() {
-  
+
   return (
     <div class="sidebar">
 
